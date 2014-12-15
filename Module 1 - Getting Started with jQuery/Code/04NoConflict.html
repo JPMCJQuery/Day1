@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery - noConflict Mode</title>
+
+		<script>var $ = function() { alert("Hi"); };</script>
+
+		<!-- Step #1: Uncomment so jQuery takes $ from our function -->
+		<!-- <script src="http://code.jquery.com/jquery-1.11.0.js"></script> -->
+		<script>
+			// Step #2: Uncomment noConflict so jQuery releases control of $ back to our function
+			/* jQuery.noConflict(); */
+			$.call();			
+
+			// Step #3: Put jQuery in noConflict mode and use jQuery everywhere instead of $
+			/* jQuery.noConflict();
+			jQuery(document).ready(function() { 
+				$.call(); 
+			}); */
+			
+			// Step #4: Put jQuery in noConflict mode with an alias
+			/* var j = jQuery.noConflict();
+			j(document).ready(function() { 
+				$.call(); 
+			});*/
+
+			// Step #5: Put jQuery in noConflict mode and pass $ to function.  
+			// 	Use $ in the function, jQuery globally
+			/* jQuery.noConflict();
+			jQuery(document).ready(function($) { 
+				$.call(); 
+				console.log("jQuery " + $().jquery + " Ready!");
+			});
+			$.call(); */
+		</script>
+	</head>
+	<body>
+		<h1>jQuery - noConflict Mode</h1>
+	</body>
+</html>

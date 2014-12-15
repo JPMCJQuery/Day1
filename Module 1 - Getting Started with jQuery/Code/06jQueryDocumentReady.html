@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery - jQuery Document Ready</title>
+		<script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+		<script>
+			// Step #1: Use anonymous function with $(document).ready()
+			$(document).ready(function() { 
+				alert("jQuery Document Ready");
+			});
+
+			// Step #2: Pass function name to $(document).ready()
+			function documentReady() { alert("jQuery documentReady"); };
+			//$(document).ready(documentReady);
+
+			// Step #3: Vague syntax where you pass function to jQuery object
+			// 	Equivalent to $(document).ready()
+			//$(function() { alert("jQuery Document Ready"); });
+
+			// Step #4: Just pass function name
+			//$(documentReady);		
+		</script>
+	</head>
+	<body>
+		<h1>jQuery - jQuery Document Ready</h1>
+	</body>
+</html>

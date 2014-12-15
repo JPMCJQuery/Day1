@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery - jQuery Document Ready</title>
+		<script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+		<script>
+			// Step #1: Use anonymous function with $(document).ready()
+			$(window).load(function() { 
+				alert("jQuery Window Load");
+			});
+
+			// Step #2: Pass function name to $(document).ready()
+			function windowLoad() { alert("jQuery windowLoad"); };
+			$(window).load(windowLoad);
+
+			// Step #3: Document Ready fires before Window Load
+			$(document).ready(function() { 
+				alert("jQuery Document Ready");
+			});		
+		</script>
+	</head>
+	<body>
+		<h1>jQuery - jQuery Document Ready</h1>
+	</body>
+</html>

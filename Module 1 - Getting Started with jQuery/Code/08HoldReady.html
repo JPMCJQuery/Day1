@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery - holdReady</title>
+		<script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+		<script>
+			$.holdReady(true);
+
+			$(document).ready(function() {
+    				console.log("jQuery Ready"); 
+			});
+
+			setTimeout(function() {
+				console.log("Releasing hold");
+				$.holdReady(false);
+			}, 5000);
+		</script>
+	</head>
+	<body>
+		<h1>jQuery - holdReady</h1>
+	</body>
+</html>
